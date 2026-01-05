@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Organized Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="todo-container">
+        <h2>📅 My Planner</h2>
+        
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'today')">Today</button>
+            <button class="tab-btn" onclick="openTab(event, 'weekly')">Weekly</button>
+            <button class="tab-btn" onclick="openTab(event, 'monthly')">Monthly</button>
+        </div>
+
+        <div class="input-section">
+            <input type="text" id="todo-input" placeholder="What is the task?">
+            <input type="date" id="date-input"> <button id="add-btn" onclick="addTask()">Add</button>
+        </div>
+
+        <div id="today" class="tab-content" style="display:block;">
+            <h3>Today's Work</h3>
+            <ul id="today-list"></ul>
+        </div>
+
+        <div id="weekly" class="tab-content" style="display:none;">
+            <h3>Weekly Work</h3>
+            <ul id="weekly-list"></ul>
+        </div>
+
+        <div id="monthly" class="tab-content" style="display:none;">
+            <h3>Monthly Work</h3>
+            <ul id="monthly-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
